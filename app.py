@@ -1,6 +1,13 @@
+from flask import Flask, render_template
 import os
 
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Render가 자동 할당한 포트 사용
+    port = int(os.environ.get('PORT', 5000))  # Render에서 사용하는 포트
     app.run(host='0.0.0.0', port=port)
 
