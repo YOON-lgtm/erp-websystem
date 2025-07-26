@@ -1,0 +1,20 @@
+# Exported from Render on 2025-07-26T07:02:21Z
+services:
+- type: web
+  name: erp-websystem
+  runtime: python
+  repo: https://github.com/YOON-lgtm/erp-websystem
+  plan: free
+  envVars:
+  - key: DATABASE_URL
+    sync: false
+  - key: SECRET_KEY
+    sync: false
+  - key: FLASK_ENV
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python app.py
+  autoDeployTrigger: commit
+  rootDir: .
+version: "1"
