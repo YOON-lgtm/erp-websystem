@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}ERP 시스템{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">홈</a></li>
+      <li><a href="/order">작업지시서</a></li>
+      <li><a href="/yarn">원사</a></li>
+      <li><a href="/production">생산</a></li>
+      <li><a href="/defect">불량</a></li>
+      <li><a href="/delivery">납품</a></li>
+      <li><a href="/stock">재고</a></li>
+      <li><a href="/report">리포트</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

@@ -2,11 +2,21 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>ERP System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>ERP 웹 시스템</title>
 </head>
 <body>
     <h1>ERP 웹 시스템</h1>
     <p>이 시스템은 생산, 재고, 불량, 납품을 관리합니다.</p>
+
+    <ul>
+        <li><a href="/order">염색 작업지시서</a></li>
+        <li><a href="/yarn">원사 입출고</a></li>
+        <li><a href="/production">생산 기록</a></li>
+        <li><a href="/defect">불량 기록</a></li>
+        <li><a href="/delivery">납품 기록</a></li>
+        <li><a href="/stock">재고 현황</a></li>
+        <li><a href="/report">보고서</a></li>
+    </ul>
 </body>
 </html>
+
